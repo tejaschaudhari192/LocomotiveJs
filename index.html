@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Locomotive</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
+
+</head>
+
+<style>
+    :root {
+        --bg-primary: #F5E41B;
+        --bg-secondary: black;
+        --bg-tertiary: white;
+        --font-primary: white;
+        --font-secondary: black
+    }
+
+    @font-face {
+        font-family: FreightBigProMedium;
+        src: url("fonts/FreightBigProMedium-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: FreightBigProLight;
+        src: url("fonts/FreightBigProLight-Regular.ttf");
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    #yellow {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg-primary);
+        position: absolute;
+        z-index: 3;
+    }
+
+    #loader {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg-primary);
+        position: fixed;
+        color: var(--font-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hero-text {
+            text-align: center;
+            font-size: 6.9vw;
+            line-height: 5.5vw;
+            font-family: FreightBigProLight, "Sans Serif Collection";
+            font-weight: 100;
+            letter-spacing: -3px;
+            position: relative;
+            z-index: 2;
+
+            em {
+                letter-spacing: -5px;
+                font-size-adjust: 0.5;
+            }
+        }
+
+        video {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+    }
+
+    #hero {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hero-text {
+            text-align: center;
+            font-size: 6.9vw;
+            line-height: 5.5vw;
+            font-family: FreightBigProLight, "Sans Serif Collection";
+            font-weight: 100;
+            letter-spacing: -3px;
+
+            em {
+                letter-spacing: -5px;
+                font-size-adjust: 0.5;
+            }
+        }
+    }
+
+    #page2 {
+        height:100vh;
+        width: 100%;
+        background-color: var(--bg-secondary);
+    }
+    #page3 {
+        height:100vh;
+        width: 100%;
+        background-color: var(--bg-tertiary);
+    }
+</style>
+
+<body>
+<div id="main">
+    <div id="loader">
+        <div id="yellow">
+        </div>
+        <video autoplay loop muted src="media/bg.mp4"></video>
+        <div class="hero-text">
+            <em>We</em><em> are a </em>CREATIVE<em class=""> studio<br>
+        </em>DEDICATED <em>to </em>CULTURAL<br>
+            ADVANCEMENT <em>through</em> <br>
+            STRATEGY <em>and </em>DESIGN.
+        </div>
+    </div>
+    <section id="hero">
+        <div class="hero-text">
+            <em>We</em><em> are a </em>CREATIVE<em class=""> studio<br>
+        </em>DEDICATED <em>to </em>CULTURAL<br>
+            ADVANCEMENT <em>through</em> <br>
+            STRATEGY <em>and </em>DESIGN.
+        </div>
+    </section>
+
+    <section id="page2"></section>
+    <section id="page3"></section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    function loading() {
+        var tl = gsap.timeline();
+        tl.to("#yellow", {
+            top: "-100%",
+            delay: 0.5,
+            duration: 0.5,
+            ease: "expo.out"
+        })
+
+        tl.to("#loader video", {
+            delay: 0.5,
+            top: "-100%",
+            duration: 0.7,
+            ease: "expo.out"
+        }, 'loader')
+
+        tl.to("#loader .hero-text", {
+            delay: 0.5,
+            color: "black",
+        }, 'loader')
+
+        tl.to("loader", {
+            opacity: 0
+        })
+    }
+
+    loading();
+
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('#main'),
+        smooth: true
+    });
+
+</script>
+</body>
+
+</html>

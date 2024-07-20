@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Locomotive</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body,
+    main {
+        height: 100%;
+        width: 100%;
+    }
+
+    #page1 {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(66, 179, 216);
+        background-image: url("img/cow.jpeg");
+        background-size: cover;
+    }
+
+    #page2 {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(150, 207, 227);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    #page3 {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(216, 226, 230);
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="page1" data-scroll></div>
+        <div id="page2" data-scroll>
+            <img data-scroll data-scroll-speed="4" data-scroll-direction="horizontal" src="img/vara.jpeg">
+            <img
+                    data-scroll data-scroll-speed="2"
+                    src="img/boy.jpeg">
+        </div>
+        <div id="page3" data-scroll></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#main'),
+            smooth: true
+        });
+
+    </script>
+</body>
+
+</html>
