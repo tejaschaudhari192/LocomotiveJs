@@ -129,13 +129,18 @@
         background-color: black;
         background-size: cover;
         background-position: center;
-        color: var(--font-primary);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+
+        .elems {
+            height: 100vh;
+            width: 100%;
+            color: var(--font-primary);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
         .elem {
             text-transform: uppercase;
@@ -279,7 +284,7 @@
         transition: opacity 0.5s ease;
 
         font-size: 4vw;
-        font-family: FreightBigProLight,serif;
+        font-family: FreightBigProLight, serif;
 
     }
 
@@ -303,26 +308,11 @@
         }
     }
 
-
-    /*@media screen and (max-width: 800px) {*/
-    /*    #page2 .elem h2 {*/
-    /*        font-size: 2rem;*/
-    /*    }*/
-
-    /*    .elem:hover {*/
-    /*        .moving {*/
-    /*            transform: translateY(-50%) scaleY(0.4) !important;*/
-
-
-    /*        }*/
-    /*    }*/
-
-    /*}*/
 </style>
 
 <body>
 <div id="main">
-    <div id="loader" data-scroll>
+    <div id="loader" data-scroll data-scroll-speed="-2">
         <div id="yellow">
         </div>
         <video autoplay loop muted src="media/site/bg.mp4"></video>
@@ -366,130 +356,133 @@
         </div>
     </section>
 
-    <section id="page2" data-scroll data-scroll-speed="1">
-        <div class="elem" data-img="media/site/mineral.jpg">
-            <h2>mineral</h2>
-            <div class="moving">
-                <div class="blur"></div>
+    <section id="page2" data-scroll data-scroll-speed="0">
+        <div class="elems" data-scroll data-scroll-speed="2">
+            <div class="elem" data-img="media/site/mineral.jpg">
+                <h2>mineral</h2>
+                <div class="moving">
+                    <div class="blur"></div>
 
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
                 </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
+            </div>
+            <div class="elem" data-img="media/site/erthos.jpg">
+                <h2>erthos</h2>
+                <div class="moving">
+                    <div class="blur"></div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
                 </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
+            </div>
+            <div class="elem" data-img="media/site/converse.jpg">
+                <h2>converse</h2>
+                <div class="moving">
+                    <div class="blur"></div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="elem" data-img="media/site/skky.jpg">
+                <h2>skky</h2>
+                <div class="moving">
+                    <div class="blur"></div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="elem" data-img="media/site/boldly.jpg">
+                <h2>boldly</h2>
+                <div class="moving">
+                    <div class="blur"></div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
+                    <div class="moving-in">
+                        <h5>strategy</h5>
+                        <h5>branding & identity</h5>
+                        <h5>packaging design</h5>
+                        <h5>creative direction</h5>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="elem" data-img="media/site/erthos.jpg">
-            <h2>erthos</h2>
-            <div class="moving">
-                <div class="blur"></div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-            </div>
-        </div>
-        <div class="elem" data-img="media/site/converse.jpg">
-            <h2>converse</h2>
-            <div class="moving">
-                <div class="blur"></div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-            </div>
-        </div>
-        <div class="elem" data-img="media/site/skky.jpg">
-            <h2>skky</h2>
-            <div class="moving">
-                <div class="blur"></div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-            </div>
-        </div>
-        <div class="elem" data-img="media/site/boldly.jpg">
-            <h2>boldly</h2>
-            <div class="moving">
-                <div class="blur"></div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-                <div class="moving-in">
-                    <h5>strategy</h5>
-                    <h5>branding & identity</h5>
-                    <h5>packaging design</h5>
-                    <h5>creative direction</h5>
-                </div>
-            </div>
-        </div>
+
     </section>
-    <section id="page3">
+    <section id="page3" data-scroll data-scroll-speed="0">
         <div class="grid-container">
             <div class="column">
                 <div class="image-container">
