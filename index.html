@@ -158,7 +158,6 @@
             .moving {
                 position: absolute;
                 overflow: hidden;
-
                 top: 50%;
                 transform: translateY(-50%) scaleY(0);
                 z-index: -1;
@@ -230,10 +229,95 @@
     }
 
     #page3 {
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         background-color: var(--bg-tertiary);
     }
+
+    .grid-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .column {
+        flex: 20%;
+        max-width: 33.3%;
+        padding: 5px 10px;
+    }
+
+    .image-container {
+        position: relative;
+        margin: 10px 0;
+        overflow: hidden;
+
+    }
+
+    .image-container img {
+        vertical-align: middle;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .image-container:hover img {
+        scale: 1.1;
+
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: #000;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+        font-size: 4vw;
+        font-family: FreightBigProLight,serif;
+
+    }
+
+    .image-container:hover .overlay {
+        opacity: 1;
+    }
+
+
+    @media (max-width: 1200px) {
+        .column {
+            flex: 40%;
+            flex-wrap: wrap;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .column {
+            flex: 50%;
+            max-width: 100%;
+        }
+    }
+
+
+    /*@media screen and (max-width: 800px) {*/
+    /*    #page2 .elem h2 {*/
+    /*        font-size: 2rem;*/
+    /*    }*/
+
+    /*    .elem:hover {*/
+    /*        .moving {*/
+    /*            transform: translateY(-50%) scaleY(0.4) !important;*/
+
+
+    /*        }*/
+    /*    }*/
+
+    /*}*/
 </style>
 
 <body>
@@ -405,7 +489,79 @@
             </div>
         </div>
     </section>
-    <section id="page3"></section>
+    <section id="page3">
+        <div class="grid-container">
+            <div class="column">
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/converse-nextstudio/35375/Cover_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Converse">
+                    <div class="overlay">Converse</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/nike-studio-45/3184/Nike-Studio-45-Desk_WORKS_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Nike Studio 45">
+                    <div class="overlay">Nike Studio 45</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/nike-nfl-2022/37789/nike-nfl-cover2_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Nike NFL 2022">
+                    <div class="overlay">Nike NFL 2022</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/public/37839/public-cover2_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Public Cover">
+                    <div class="overlay">Public Cover</div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/futurevvorld/38020/fvv-1.5_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Future VVorld">
+                    <div class="overlay">Future VVorld</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/converse/38120/v1.5-converse-bball-3_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Converse Bball">
+                    <div class="overlay">Converse Bball</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/jeen-yuhs/35858/v1.5-home-image2_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Jeen Yuhs">
+                    <div class="overlay">Jeen Yuhs</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/us-soccer/21753/NewThumb_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="US Soccer">
+                    <div class="overlay">US Soccer</div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/between-places/40495/W%C3%98RKS_BetweenPlaces_Cover_240219_231911_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Between Places">
+                    <div class="overlay">Between Places</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/Fear-of-God-Nike/38013/fog-1.5_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Fear of God Nike">
+                    <div class="overlay">Fear of God Nike</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/versace-trigerca-identity/38005/versace-1.5_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Versace Trigerca Identity">
+                    <div class="overlay">Versace Trigerca Identity</div>
+                </div>
+                <div class="image-container">
+                    <img src="https://works.studio/assets/imager/images/essentials-fear-of-god/42214/Thumbnail_e49f8295ccc5a85e1a76e2d68c06456f.jpg"
+                         alt="Essentials Fear of God">
+                    <div class="overlay">Essentials Fear of God</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
@@ -453,15 +609,14 @@
     });
 
     let elems = document.querySelectorAll('.elem');
-            let page2 = document.querySelector('#page2')
+    let page2 = document.querySelector('#page2')
     elems.forEach((elem) => {
-        elem.addEventListener('mouseenter',()=>{
+        elem.addEventListener('mouseenter', () => {
             let bgImg = elem.getAttribute("data-img");
             page2.style.backgroundImage = `url(${bgImg})`
         })
-        // console.log(elem)
-
     })
+
 
 </script>
 </body>
